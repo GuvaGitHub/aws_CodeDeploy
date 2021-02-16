@@ -11,7 +11,7 @@ phases:
       - "echo Building docker image"
       - "docker build -t cga-web-ecs ."
       - "docker tag cga-web-ecs:latest 748834010456.dkr.ecr.us-east-1.amazonaws.com/cga-web-ecs:latest"
-  build:
+  postbuild:
     commands:
       - "echo Build is complete on `date`"
       - "echo Pushing the docker image"
